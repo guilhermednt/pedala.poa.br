@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pedala</title>
+    <style>
+      body, html { width: 100%; height: 100%; margin: 0; }
+
+      .bike {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50vh;
+        width: 98%;
+        height: 98%;
+        margin: 0;
+        padding: 0;
+        -webkit-animation:anim 2s ease infinite;
+      }
+      @-webkit-keyframes anim 
+      {
+        0 {-webkit-transform:rotate(0deg);}
+        50% {-webkit-transform:rotate(2deg);}
+        100% {-webkit-transform:rotate(0deg);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bike">🚲</div>
+  </body>
+</html>
+
