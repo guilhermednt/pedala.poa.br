@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  pedala.poa.br:
+    image: nginx:mainline-alpine
+    container_name: pedala.poa.br
+    labels:
+      - "traefik.frontend.entryPoints=https,http"
+      - "traefik.frontend.redirect.entryPoint=https"
+      - "traefik.frontend.rule=Host:pedala.poa.br,pedala.local.dona.to"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+    networks:
+      - router
+    restart: always
+
+networks:
+  router:
+    external:
+      name: router
