@@ -5,6 +5,7 @@ services:
     image: nginx:mainline-alpine
     container_name: pedala.poa.br
     labels:
+      - "traefik.enable=true"
       - "traefik.frontend.entryPoints=https,http"
       - "traefik.frontend.redirect.entryPoint=https"
       - "traefik.frontend.rule=Host:pedala.poa.br,pedala.local.dona.to"
