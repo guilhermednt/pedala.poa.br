@@ -3,5 +3,6 @@
     "alias": "pedala.poa.br",
     "builds": [
         { "src": "index.html", "use": "@now/static"}
-    ]
+    ],
+    "regions": ["cdg"]
 }
